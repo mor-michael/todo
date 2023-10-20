@@ -54,7 +54,7 @@ export default function TodoPopup() {
   }
 
   return(
-    <div onClick={handleTogglePopup} className="z-50 absolute flex left-0 top-0 h-full w-full backdrop-blur-sm">
+    <div onClick={handleTogglePopup} className="z-50 flex left-0 top-0 h-screen w-full fixed backdrop-blur-sm">
       <div className="m-auto flex flex-col w-[340px] xl:w-[800px] xl:h-[600px] bg-white rounded-xl gap-y-7">
         <label className="mt-4 w-[70%] h-[5%] mx-auto flex flex-col">Title: 
           <input onChange={e => setTitle(e.target.value)} className="border-2 rounded-lg" type="text" defaultValue={todo ? todo.title : ""}></input>

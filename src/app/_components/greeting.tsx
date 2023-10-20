@@ -3,7 +3,7 @@ import Image from "next/image"
 import { useAppSelector } from "@/redux/store"
 import { useDispatch } from "react-redux"
 import { calculateUserStats } from "@/redux/features/user-slice"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 
 const Stats = ({amount, activity}: {amount: number, activity: string}) => {
   return(
@@ -23,12 +23,18 @@ export default function Greeting() {
       calculateUserStats({todos: todoArr}) 
     )
   }, [todoArr, dispatch])
+  const [isClient, setIsClient] = useState(false)
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
   const user = useAppSelector((state) => state.userReducer)
   return(
     <div className="flex flex-col">
-      <div className=" bg-graybg w-[340px] h-[80px] xl:w-[620px] xl:h-[160px] xl:mt-14 rounded-2xl flex">
+      <div className=" bg-graybg mt-4 w-[340px] h-[80px] xl:w-[620px] xl:h-[160px] xl:mt-14 rounded-2xl flex">
         <div className="ml-[20px] xl:ml-[54px] my-auto">
-          <p className=" text-blacktext text-base xl:text-3xl font-medium">Hello {user.name}!</p>
+          {isClient &&
+            <p className=" text-blacktext text-base xl:text-3xl font-medium">Hello {user.name}!</p>
+          }
           <p className="text-[#5A5A5A] text-xs xl:leading-6">it&apos;s good to see you again</p>
         </div>
         <div className="ml-[20px] xl:ml-[70px]">

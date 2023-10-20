@@ -11,7 +11,7 @@ type UserState = {
   currentTodo: string
 }
 
-const initialState = {
+export const initialState = {
   name: 'Mikhail',
   hoursWorked: 0,
   tasksDone: 0,

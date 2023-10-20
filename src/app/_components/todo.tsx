@@ -176,7 +176,7 @@ const TodoSlider = () => {
   }, [])
 
   return(
-    <div className="mt-3 xl:mt-[30px] h-[350px] xl:h-[400px] overflow-auto scrollbar ">
+    <div className="mt-3 xl:mt-[30px] h-[350px] sm:h-[278px] xl:h-[400px] overflow-auto scrollbar ">
       <ul className="space-y-4 xl:space-y-8 xl:mr-2">
         {isClient && selectedDayTodos.map(todo => <li key={todo.id} >
           <TodoItem 
