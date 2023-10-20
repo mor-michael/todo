@@ -32,8 +32,8 @@ export default function Greeting() {
           <p className="text-[#5A5A5A] text-xs xl:leading-6">it&apos;s good to see you again</p>
         </div>
         <div className="ml-[20px] xl:ml-[70px]">
-          <Image className="w-[150px] my-[-15px] xl:w-[300px] xl:h-[150px] xl:my-[-35px]" src="/pattern.svg" alt="pattern picture" width={0} height={0} priority/>
-          <Image className="w-[150px] mt-[-35px] xl:w-[300px] xl:h-[150px] xl:mt-[-70px] " src="/pattern.svg" alt="pattern picture" width={0} height={0} priority/>
+          <Image className="w-[150px] my-[-15px] xl:w-[300px] xl:h-[150px] xl:my-[-35px]" src="pattern.svg" alt="pattern picture" width={0} height={0} priority/>
+          <Image className="w-[150px] mt-[-35px] xl:w-[300px] xl:h-[150px] xl:mt-[-70px] " src="pattern.svg" alt="pattern picture" width={0} height={0} priority/>
         </div>
       </div>
       <div className="flex mt-2 gap-x-1 xl:mt-8 xl:gap-x-6">

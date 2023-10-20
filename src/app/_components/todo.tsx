@@ -34,7 +34,7 @@ const CreateTodo = () => {
         <p className="text-sm text-[#C7C7C7]">create a new task</p>
       </div>
       <button onClick={() => {handleSetCurrentTodo(""); handleTogglePopup()}} className="mr-[10px] xl:mr-[27px]">
-        <Image className="w-[38px] h-[38px] xl:w-[52px] xl:h-[52px]" src="/plus-icon.svg" alt="plus icon" width={0} height={0} />
+        <Image className="w-[38px] h-[38px] xl:w-[52px] xl:h-[52px]" src="plus-icon.svg" alt="plus icon" width={0} height={0} />
       </button>
     </div>
   )
@@ -88,10 +88,10 @@ const Calendar = () => {
         <p className="xl:text-2xl">{month} {day}, {year}</p>
         <div>
           <button className="mr-3 xl:mr-[24px]" onClick={handleGoBack}>
-            <Image className="w-[28px] h-[28px] xl:w-[36px] xl:h-[36px]" src="/left-arrow.svg" alt="left arrow icon" width={0} height={0} />
+            <Image className="w-[28px] h-[28px] xl:w-[36px] xl:h-[36px]" src="left-arrow.svg" alt="left arrow icon" width={0} height={0} />
           </button>
           <button className="xl:mr-[8px]" onClick={handleGoFOrward}>
-            <Image className="w-[28px] h-[28px] xl:w-[36px] xl:h-[36px]" src="/right-arrow.svg" alt="right arrow icon" width={0} height={0} />
+            <Image className="w-[28px] h-[28px] xl:w-[36px] xl:h-[36px]" src="right-arrow.svg" alt="right arrow icon" width={0} height={0} />
           </button>
         </div>
       </div>
