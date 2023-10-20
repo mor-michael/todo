@@ -3,7 +3,7 @@
 import Navbar from '../_components/navbar'
 import { useDispatch } from 'react-redux'
 import { useAppSelector } from '@/redux/store'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { changeName } from '@/redux/features/user-slice'
 
 
@@ -18,10 +18,14 @@ const SettingsItem = () => {
       })
     )
   }
+  const [isClient, setIsClient] = useState(false)
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
   return(
     <div className="mt-6 sm:ml-10 xl:mx-auto xl:space-y-6">
       <label className="bg-graybg flex p-2 gap-x-2 xl:gap-x-0 xl:p-5 rounded-xl ">username:
-        <input className="xl:ml-4 w-[100px]" onChange={(e) => setName(e.target.value)} defaultValue={name} />
+        <input className="xl:ml-4 w-[100px]" onChange={(e) => setName(e.target.value)} defaultValue={isClient ? name : ""} />
         <button className="xl:ml-4" onClick={handleChangeUsername}>apply changes</button>
       </label>
     </div>

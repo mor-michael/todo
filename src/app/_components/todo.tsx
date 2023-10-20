@@ -136,7 +136,7 @@ const TodoItem = ({title, body, deadline, done, id}: {title: string, body: strin
   }
 
   return(
-    <div className="bg-[#0C0B0B] xl:ml-auto text-white h-[100px] w-[330px] xl:h-[176px] xl:w-[400px] rounded-2xl flex justify-between">
+    <div className="bg-[#0C0B0B] ml-1 xl:ml-auto text-white h-[100px] w-[325px] xl:h-[176px] xl:w-[400px] rounded-2xl flex justify-between">
       <div className="m-[10px] xl:m-[30px]">
         <p className="xl:text-lg font-semibold">{title.length > 15 ? title.slice(0, 15) + '...' : title}</p>
         <p className="mt-[5px] text-sm opacity-80">{body.length > 20 ? body.slice(0, 20) + '...' : body}</p>
